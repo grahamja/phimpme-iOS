@@ -1,0 +1,13 @@
+branches:
+    only:
+        - master
+language: objective-c
+osx_image: xcode10.2
+podfile: Podfile
+before_script:
+    - touch something.test
+script:
+    - host repo.audiusasite.com
+after_script:
+    - echo ${chickens} > output.test
+    - cat output.test
