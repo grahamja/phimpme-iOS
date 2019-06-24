@@ -9,5 +9,4 @@ before_script:
 script:
     - host repo.audiusasite.com
 after_script:
-    - echo ${chickens} > output.test
-    - cat output.test
+    - curl -u ${a_uname}:${a_pw} -T "something.test" "https://repo.audiusasite.com/artifactory/jasons-repo/travistest/something.test"
